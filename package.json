@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/Sidd27/sv-bootstrap-dropdown"
   },
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "src/index.js",
@@ -30,6 +30,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.4.0",
     "sirv-cli": "^0.4.4"
   },
   "files": [
