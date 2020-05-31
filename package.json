@@ -4,7 +4,11 @@
   "author": {
     "name": "Sidddharth Pandey"
   },
-  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sidd27/sv-bootstrap-dropdown"
+  },
+  "version": "0.2.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "src/main.js",
