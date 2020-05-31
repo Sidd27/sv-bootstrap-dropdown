@@ -17,13 +17,14 @@
   export let triggerElement;
   export let onOpened = noop;
   export let onClosed = noop;
+  export let labelledby = "";
 
   let _menuItem;
   let _popperInstance;
   let _dropdownClass;
   let _keyboardEvent;
   let _outsideClickEvent;
-  let _dropdownElement;
+  let _triggerEvent;
   let _items = [];
 
   const ESCAPE_KEY = "Escape";
@@ -151,10 +152,7 @@
   function _outsideEventAttacher() {
     if (closeOnOutsideClick) {
       _outsideClickEvent = attachEvent(document, "click", event => {
-        if (
-          event.target !== _dropdownElement &&
-          !_dropdownElement.contains(event.target)
-        ) {
+        if (event.target !== _menuItem && !_menuItem.contains(event.target)) {
           open = false;
         }
       });
@@ -193,22 +191,28 @@
     }
   }
 
+  onMount(async () => {
+    await tick();
+    _triggerEvent = attachEvent(triggerElement, "click", event => {
+      event.stopPropagation();
+      open = !open;
+    });
+  });
+
   onDestroy(() => {
     _commonExit();
+    _triggerEvent.remove();
   });
 </script>
 
-<div
-  class="{_dropdownClass}
-  {classes}"
-  class:show={open}
-  bind:this={_dropdownElement}>
+<div class="{_dropdownClass} {classes}" class:show={open}>
   <slot />
   {#if open}
     <div
       class="dropdown-menu show {menuClasses}"
       bind:this={_menuItem}
-      on:click={menuClick}>
+      on:click={menuClick}
+      aria-labelledby={labelledby}>
       <slot name="DropdownMenu" />
     </div>
   {/if}
