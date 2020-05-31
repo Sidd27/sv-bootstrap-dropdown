@@ -260,3 +260,92 @@ In Popper 2 we no longer consider CSS margin because of inherent issues with it.
 
 ---
 Therefore we have default distance offset as 2 to have exact distance as Vanilla Bootstrap
+
+### Component Options
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>open</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>You can use this to open the dropdown programtically from function.(Note setting open to true on load may lead to bug of placement in popper u can use it with displayStatic option)</td>
+    </tr>
+    <tr>
+        <td>flip</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to [Popper.js](https://popper.js.org/docs/v2/modifiers/flip/)</td>
+    </tr>
+    <tr>
+        <td>placement</td>
+        <td>string</td>
+        <td>'bottom-start'</td>
+        <td>Use `placement` option on `Dropdown` component for placement change</td>
+    </tr>
+    <tr>
+        <td>displayStatic</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>By default, we use Popper.js for dynamic positioning. Disable this with</td>
+    </tr>
+    <tr>
+        <td>keyboard</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Closes the dropdown when escape key is pressed</td>
+    </tr>
+    <tr>
+        <td>insideClick</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>By default, a dropdown menu closes on document click, even if you clicked on an element inside the dropdown. Use `insideClick="true"` to allow click inside the dropdown</td>
+    </tr>
+    <tr>
+        <td>closeOnOutsideClick</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>By default, a dropdown menu closes on document click. Use `closeOnOutsideClick="false"` to disable closing of dropdown on outside click</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
