@@ -8,10 +8,10 @@
     "type": "git",
     "url": "https://github.com/Sidd27/sv-bootstrap-dropdown"
   },
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "src/main.js",
+  "svelte": "src/index.js",
   "scripts": {
     "build": "rollup -c configs/rollup.config.js",
     "dev": "rollup -c configs/rollup.dev-config.js -w",
