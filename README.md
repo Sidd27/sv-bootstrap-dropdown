@@ -7,8 +7,6 @@ Svelte Dropdown Component for Bootstrap (Bootstrap’s dropdown plugin in svlete
 ### Requirements
 Bootstrap CSS needs to be present globally in project
 
-
-
 ## Usage
 
 ### Single button
@@ -35,9 +33,12 @@ Bootstrap CSS needs to be present globally in project
 </div>
 </Dropdown>
 ```
+
 ### Split button
 Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of .dropdown-toggle-split for proper spacing around the dropdown caret. Just make triggerElement as splited caret button of btn-group and class `.btn-group` via classes option on Dropdown component
+
 #### Example
+
 ```html
 <script>
     import Dropdown from "sv-bootstrap-dropdown";
@@ -62,7 +63,9 @@ Similarly, create split button dropdowns with virtually the same markup as singl
     </div>
   </Dropdown>
 ```
+
 ### Trigger Sizing
+
 Button dropdowns work with buttons of all sizes, including default and split dropdown buttons as the triggerElement is being handled by the developer they have freedom to add any classes, style etc
 
 |Small|Large|Extra large|
@@ -70,9 +73,11 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 |  .btn-sm |  .btn-lg | .btn-xl  |
 
 ### Flip
+
 This option should tell the `Dropdown` to filp side if there is no space on the prefered side
 
 ### Example
+
 ```html
 <script>
     import Dropdown from "sv-bootstrap-dropdown";
@@ -85,15 +90,18 @@ This option should tell the `Dropdown` to filp side if there is no space on the 
 ```
 
 ### Directions
+
 Use `placement` option on `Dropdown` component for placement change
 
 ---
 **NOTE**
 
-The `flip` option will take effect there is no space for dropdown on the side mentioned in placement.
+> The `flip` option will take effect there is no space for dropdown on the side mentioned in placement.
 
 ---
+
 #### Example
+
 ```html
 <script>
     import Dropdown from "sv-bootstrap-dropdown";
@@ -115,76 +123,28 @@ The `flip` option will take effect there is no space for dropdown on the side me
     </div>
   </Dropdown>
 ```
+
 #### Complete Placement Options
+
 You can use more options than Vanilla Bootstrap by using placement option
-<table>
-    <thead>
-        <tr>
-            <th>Placement</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tr>
-        <td><code>auto</code></td>
-        <td>Placements will choose the side with most space and it will be in the center of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>auto-start</code></td>
-        <td>Placements will choose the side with most space and it will be in the start of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>auto-end</code></td>
-        <td>Placements will choose the side with most space and it will be in the end of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>top</code></td>
-        <td>Placements will be upside (dropup) and it will be in the center of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>top-start</code></td>
-        <td>Placements will be upside (dropup) and it will be in the start of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>top-end</code></td>
-        <td>Placements will be upside (dropup) and it will be in the end of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>bottom</code></td>
-        <td>Placements will be downside (dropdown) and it will be in the center of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>bottom-start</code></td>
-        <td>Placements will be downside (dropdown) and it will be in the start of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>bottom-end</code></td>
-        <td>Placements will be downside (dropdown) and it will be in the end of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>right</code></td>
-        <td>Placements will be rightside (dropright) and it will be in the center of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>right-start</code></td>
-        <td>Placements will be rightside (dropright) and it will be in the start of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>right-end</code></td>
-        <td>Placements will be rightside (dropright) and it will be in the end of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>left</code></td>
-        <td>Placements will be leftside (dropleft) and it will be in the center of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>left-start</code></td>
-        <td>Placements will be leftside (dropleft) and it will be in the start of trigger element</td>
-    </tr>
-    <tr>
-        <td><code>left-end</code></td>
-        <td>Placements will be leftside (dropleft) and it will be in the end of trigger element</td>
-    </tr>
-</table>
+
+|Placement|Description|
+|--- |--- |
+|auto|Placements will choose the side with most space and it will be in the center of trigger element|
+|auto-start|Placements will choose the side with most space and it will be in the start of trigger element|
+|auto-end|Placements will choose the side with most space and it will be in the end of trigger element|
+|top|Placements will be upside (dropup) and it will be in the center of trigger element|
+|top-start|Placements will be upside (dropup) and it will be in the start of trigger element|
+|top-end|Placements will be upside (dropup) and it will be in the end of trigger element|
+|bottom|Placements will be downside (dropdown) and it will be in the center of trigger element|
+|bottom-start|Placements will be downside (dropdown) and it will be in the start of trigger element|
+|bottom-end|Placements will be downside (dropdown) and it will be in the end of trigger element|
+|right|Placements will be rightside (dropright) and it will be in the center of trigger element|
+|right-start|Placements will be rightside (dropright) and it will be in the start of trigger element|
+|right-end|Placements will be rightside (dropright) and it will be in the end of trigger element|
+|left|Placements will be leftside (dropleft) and it will be in the center of trigger element|
+|left-start|Placements will be leftside (dropleft) and it will be in the start of trigger element|
+|left-end|Placements will be leftside (dropleft) and it will be in the end of trigger element|
 
 ### Responsive alignment
 If you want to use responsive alignment, disable dynamic positioning by using the `displayStatic="true"` attribute and use the responsive variation classes on option `menuClasses` in Dropdown component
@@ -192,7 +152,7 @@ If you want to use responsive alignment, disable dynamic positioning by using th
 ---
 **NOTE**
 
-The containing element is div and `.dropdown` is the default class on the `Dropdown` component. As it's a block-level element so width will be 100% to change use `classes` options add `.d-inline-block` or `.btn-group` so that the menu will adjust properly.
+> The containing element is div and `.dropdown` is the default class on the `Dropdown` component. As it's a block-level element so width will be 100% to change use `classes` options add `.d-inline-block` or `.btn-group` so that the menu will adjust properly.
 
 ---
 
@@ -232,6 +192,7 @@ The offset modifier lets you displace menu element from its parent dropdown elem
 * Seconf array Element represent `Distance`
 
 #### Example
+
 ```html
 <script>
   import Dropdown from "sv-bootstrap-dropdown";
@@ -263,89 +224,21 @@ Therefore we have default distance offset as 2 to have exact distance as Vanilla
 
 ### Component Options
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>open</td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>You can use this to open the dropdown programtically from function.(Note setting open to true on load may lead to bug of placement in popper u can use it with displayStatic option)</td>
-    </tr>
-    <tr>
-        <td>flip</td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to [Popper.js](https://popper.js.org/docs/v2/modifiers/flip/)</td>
-    </tr>
-    <tr>
-        <td>placement</td>
-        <td>string</td>
-        <td>'bottom-start'</td>
-        <td>Use `placement` option on `Dropdown` component for placement change</td>
-    </tr>
-    <tr>
-        <td>displayStatic</td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>By default, we use Popper.js for dynamic positioning. Disable this with</td>
-    </tr>
-    <tr>
-        <td>keyboard</td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>Closes the dropdown when escape key is pressed</td>
-    </tr>
-    <tr>
-        <td>insideClick</td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>By default, a dropdown menu closes on document click, even if you clicked on an element inside the dropdown. Use `insideClick="true"` to allow click inside the dropdown</td>
-    </tr>
-    <tr>
-        <td>closeOnOutsideClick</td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>By default, a dropdown menu closes on document click. Use `closeOnOutsideClick="false"` to disable closing of dropdown on outside click</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
+|Name|Type|Default|Description|
+|--- |--- |--- |--- |
+|open|boolean|false|You can use this to open the dropdown programtically from function.(*Note: setting open to true on load may lead to bug of placement in popper u can use it with displayStatic option*).|
+|flip|boolean|true|Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to [Popper.js](https://popper.js.org/docs/v2/modifiers/flip/).|
+|placement|string|'bottom-start'|Use `placement` option on `Dropdown` component for placement change.|
+|displayStatic|boolean|false|By default, we use Popper.js for dynamic positioning. Disable this with displayStatic.|
+|keyboard|boolean|true|Closes the dropdown when escape key is pressed.|
+|insideClick|boolean|false|By default, a dropdown menu closes on document click, even if you clicked on an element inside the dropdown. Use `insideClick="true"` to allow click inside the dropdown.|
+|closeOnOutsideClick|boolean|true|By default, a dropdown menu closes on document click. Use `closeOnOutsideClick="false"` to disable closing of dropdown on outside click.|
+|offset|[?number, ?number] | or Function([Definition](https://popper.js.org/docs/v2/modifiers/offset/#options))|[0,2]|The offset modifier lets you displace menu element from its parent dropdown element.|
+|menuClasses|string|""|You can add any number of classes to `.dropdown-menu` element.|
+|classes|string|""|You can add any number of classes to `.dropdown` element.|
+|labelledby|string|""|Used for aria-labelledby on `.dropdown-menu`|
+|onClosed|function|Empty function(noop)|Can be Used for callbacks After Dropdown is Closed|
+|onOpened|function|Empty function(noop)|Can be Used for callbacks After Dropdown is Opened|
+
+### License
+[Apache-2.0](https://github.com/Sidd27/sv-bootstrap-dropdown/blob/master/LICENSE)
