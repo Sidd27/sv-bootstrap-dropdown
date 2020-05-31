@@ -233,7 +233,7 @@ Therefore we have default distance offset as 2 to have exact distance as Vanilla
 |keyboard|boolean|true|Closes the dropdown when escape key is pressed.|
 |insideClick|boolean|false|By default, a dropdown menu closes on document click, even if you clicked on an element inside the dropdown. Use `insideClick="true"` to allow click inside the dropdown.|
 |closeOnOutsideClick|boolean|true|By default, a dropdown menu closes on document click. Use `closeOnOutsideClick="false"` to disable closing of dropdown on outside click.|
-|offset|[?number, ?number] | or Function([Definition](https://popper.js.org/docs/v2/modifiers/offset/#options))|[0,2]|The offset modifier lets you displace menu element from its parent dropdown element.|
+|offset|[?number, ?number] or Function([Definition](https://popper.js.org/docs/v2/modifiers/offset/#options))|[0,2]|The offset modifier lets you displace menu element from its parent dropdown element.|
 |menuClasses|string|""|You can add any number of classes to `.dropdown-menu` element.|
 |classes|string|""|You can add any number of classes to `.dropdown` element.|
 |labelledby|string|""|Used for aria-labelledby on `.dropdown-menu`|
