@@ -1,4 +1,4 @@
-# sv-bootstrap-dropdown
+# sv-bootstrap-dropdown (Svelte Bootstrap Dropdown)
 Svelte Dropdown Component for Bootstrap (Bootstrap’s dropdown plugin in svlete applications), can be used with sapper or standalone with svelte.Just like Vainilla bootstrap this plugin too is built on a third party library, [Popper.js](https://popper.js.org/), which provides dynamic positioning and viewport detection. But Unlike Vainilla bootstrap we are using PopperJs V2 instead of v1
 
 ## How to install
