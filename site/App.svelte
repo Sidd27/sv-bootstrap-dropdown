@@ -1,6 +1,5 @@
 <script>
   import Dropdown from "../src/Dropdown.svelte";
-  let isOpen = true;
   let dropdownTrigger;
   let dropdownSplitTrigger;
   let dropdownPlacementTrigger;
@@ -25,10 +24,7 @@
   </Dropdown>
 
   <h3>Split button</h3>
-  <Dropdown
-    bind:open={isOpen}
-    triggerElement={dropdownSplitTrigger}
-    classes="btn-group">
+  <Dropdown triggerElement={dropdownSplitTrigger} classes="btn-group">
     <button type="button" class="btn btn-danger">Danger</button>
     <button
       type="button"
