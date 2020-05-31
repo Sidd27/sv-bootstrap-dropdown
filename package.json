@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/Sidd27/sv-bootstrap-dropdown"
   },
-  "version": "0.4.1",
+  "version": "0.4.2",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "src/index.js",
@@ -17,6 +17,9 @@
     "dev": "rollup -c configs/rollup.dev-config.js -w",
     "start": "sirv public",
     "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@rollup/plugin-replace": "^2.3.2"
   },
   "devDependencies": {
     "@popperjs/core": "^2.4.0",
