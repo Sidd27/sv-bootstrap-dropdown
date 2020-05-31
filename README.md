@@ -96,7 +96,7 @@ Use `placement` option on `Dropdown` component for placement change
 ---
 **NOTE**
 
-> The `flip` option will take effect there is no space for dropdown on the side mentioned in placement.
+> The `flip` option will take effect if there is no space for dropdown on the side mentioned in placement.
 
 ---
 
