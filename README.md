@@ -23,6 +23,8 @@ replace({
 ### Requirements
 Bootstrap CSS needs to be present globally in project
 
+## Simple Demo
+[Demo](https://svelte.dev/repl/f9b0e2f4193b4260b6b16bc097fa0155?version=3.23.0)
 ## Usage
 
 ### Single button
