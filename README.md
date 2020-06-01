@@ -14,8 +14,8 @@ plugins: [
   ..., // Other Plugins
   ..., // Other Plugins
 replace({
-			'process.env.NODE_ENV': JSON.stringify('production'),
-			include: '**/node_modules/**',
+	  'process.env.NODE_ENV': JSON.stringify('production'),
+	   include: '**/node_modules/**',
     })
 ]
 ```
