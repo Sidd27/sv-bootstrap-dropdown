@@ -3,8 +3,10 @@ import type { Component, Snippet } from 'svelte';
 export interface DropdownProps {
   /** Controls dropdown visibility. Supports bind:open. */
   open?: boolean;
-  /** The DOM element that triggers the dropdown. */
+  /** The DOM element that triggers the dropdown (also used as Popper anchor). */
   triggerElement?: HTMLElement | null;
+  /** Attach a click-toggle handler to triggerElement automatically. Set to false for fully manual control via bind:open. Default: true. */
+  autoToggle?: boolean;
   /** Allow Popper to flip placement when there is not enough space. Default: true. */
   flip?: boolean;
   /** Preferred placement relative to the trigger element. Default: 'bottom-start'. */

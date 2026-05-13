@@ -13,6 +13,7 @@
     menuClasses = '',
     classes = '',
     triggerElement = null,
+    autoToggle = true,
     onOpened = () => {},
     onClosed = () => {},
     labelledby = '',
@@ -61,7 +62,7 @@
   }
 
   $effect(() => {
-    if (!triggerElement) return;
+    if (!triggerElement || !autoToggle) return;
     const ev = attachEvent(triggerElement, 'click', (event) => {
       event.stopPropagation();
       open = !open;

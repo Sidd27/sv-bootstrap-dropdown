@@ -107,24 +107,25 @@ Bootstrap 5 also renames `dropright`→`dropend` and `dropleft`→`dropstart`, w
 
 ## Props
 
-| Name                  | Type               | Default          | Description                                            |
-| --------------------- | ------------------ | ---------------- | ------------------------------------------------------ |
-| `open`                | `boolean`          | `false`          | Controls visibility. Supports `bind:open`.             |
-| `triggerElement`      | `HTMLElement`      | `null`           | The DOM element that triggers the dropdown.            |
-| `flip`                | `boolean`          | `true`           | Allow Popper to flip when there is not enough space.   |
-| `placement`           | `string`           | `'bottom-start'` | Popper placement. Accepts any Popper placement string. |
-| `displayStatic`       | `boolean`          | `false`          | Disable dynamic Popper positioning.                    |
-| `keyboard`            | `boolean`          | `true`           | Close on Escape; navigate with Arrow keys.             |
-| `insideClick`         | `boolean`          | `false`          | Keep open when clicking inside the menu.               |
-| `closeOnOutsideClick` | `boolean`          | `true`           | Close when clicking outside.                           |
-| `offset`              | `[number, number]` | `[0, 2]`         | `[skidding, distance]` offset from the trigger.        |
-| `menuClasses`         | `string`           | `''`             | Extra classes for `.dropdown-menu`.                    |
-| `classes`             | `string`           | `''`             | Extra classes for the wrapper element.                 |
-| `labelledby`          | `string`           | `''`             | `aria-labelledby` for `.dropdown-menu`.                |
-| `onOpened`            | `() => void`       | `() => {}`       | Callback when the dropdown opens.                      |
-| `onClosed`            | `() => void`       | `() => {}`       | Callback when the dropdown closes.                     |
-| `children`            | `Snippet`          | —                | Default slot (typically the trigger button).           |
-| `dropdownMenu`        | `Snippet`          | —                | Menu items snippet.                                    |
+| Name                  | Type               | Default          | Description                                                                                       |
+| --------------------- | ------------------ | ---------------- | ------------------------------------------------------------------------------------------------- |
+| `open`                | `boolean`          | `false`          | Controls visibility. Supports `bind:open`.                                                        |
+| `triggerElement`      | `HTMLElement`      | `null`           | Popper anchor element (also the click toggle when `autoToggle` is true).                          |
+| `autoToggle`          | `boolean`          | `true`           | Attach click-toggle to `triggerElement`. Set to `false` for fully manual control via `bind:open`. |
+| `flip`                | `boolean`          | `true`           | Allow Popper to flip when there is not enough space.                                              |
+| `placement`           | `string`           | `'bottom-start'` | Popper placement. Accepts any Popper placement string.                                            |
+| `displayStatic`       | `boolean`          | `false`          | Disable dynamic Popper positioning.                                                               |
+| `keyboard`            | `boolean`          | `true`           | Close on Escape; navigate with Arrow keys.                                                        |
+| `insideClick`         | `boolean`          | `false`          | Keep open when clicking inside the menu.                                                          |
+| `closeOnOutsideClick` | `boolean`          | `true`           | Close when clicking outside.                                                                      |
+| `offset`              | `[number, number]` | `[0, 2]`         | `[skidding, distance]` offset from the trigger.                                                   |
+| `menuClasses`         | `string`           | `''`             | Extra classes for `.dropdown-menu`.                                                               |
+| `classes`             | `string`           | `''`             | Extra classes for the wrapper element.                                                            |
+| `labelledby`          | `string`           | `''`             | `aria-labelledby` for `.dropdown-menu`.                                                           |
+| `onOpened`            | `() => void`       | `() => {}`       | Callback when the dropdown opens.                                                                 |
+| `onClosed`            | `() => void`       | `() => {}`       | Callback when the dropdown closes.                                                                |
+| `children`            | `Snippet`          | —                | Default slot (typically the trigger button).                                                      |
+| `dropdownMenu`        | `Snippet`          | —                | Menu items snippet.                                                                               |
 
 ## License
 

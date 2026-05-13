@@ -181,11 +181,14 @@
             Use <code>bind:open</code> to control the dropdown programmatically.
           </p>
           <div class="d-flex gap-2 align-items-center">
-            <Dropdown triggerElement={manualTrigger} bind:open={manualOpen}>
+            <Dropdown
+              triggerElement={manualTrigger}
+              bind:open={manualOpen}
+              autoToggle={false}
+            >
               <span
                 class="badge bg-primary fs-6 px-3 py-2"
                 bind:this={manualTrigger}
-                style="cursor:pointer"
               >
                 Target
               </span>
