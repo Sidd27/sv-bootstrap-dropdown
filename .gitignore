@@ -1,4 +1,7 @@
 /node_modules/
-/public/build/
+dist/
+demo/dist/
 
 .DS_Store
+.claude/
+package-lock.json
