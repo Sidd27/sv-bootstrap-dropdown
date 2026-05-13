@@ -116,17 +116,23 @@
       );
     }
 
+    let outsideClickTimer;
     if (closeOnOutsideClick) {
-      events.push(
-        attachEvent(document, 'click', (event) => {
-          if (event.target !== menuEl && !menuEl.contains(event.target)) {
-            open = false;
-          }
-        })
-      );
+      // Defer by one event loop so the click that opened the dropdown
+      // doesn't immediately re-close it via the outside-click handler.
+      outsideClickTimer = setTimeout(() => {
+        events.push(
+          attachEvent(document, 'click', (event) => {
+            if (event.target !== menuEl && !menuEl.contains(event.target)) {
+              open = false;
+            }
+          })
+        );
+      }, 0);
     }
 
     return () => {
+      clearTimeout(outsideClickTimer);
       events.forEach((e) => e.remove());
       popperInstance?.destroy();
       onClosed();

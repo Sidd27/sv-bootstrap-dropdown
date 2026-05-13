@@ -135,6 +135,8 @@ describe('outside click', () => {
   it('closes on outside click', async () => {
     render(Dropdown, { open: true, triggerElement: makeTrigger() });
     await tick();
+    // Allow the deferred setTimeout(0) to register the outside-click listener
+    await new Promise((r) => setTimeout(r, 0));
     await fireEvent.click(document.body);
     await tick();
     expect(document.querySelector('.dropdown-menu')).not.toBeInTheDocument();
@@ -147,6 +149,7 @@ describe('outside click', () => {
       closeOnOutsideClick: false,
     });
     await tick();
+    await new Promise((r) => setTimeout(r, 0));
     await fireEvent.click(document.body);
     await tick();
     expect(document.querySelector('.dropdown-menu')).toBeInTheDocument();
