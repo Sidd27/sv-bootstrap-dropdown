@@ -53,7 +53,7 @@
   },
   "peerDependencies": {
     "bootstrap": "^5.0.0",
-    "svelte": "^5.0.0"
+    "svelte": "^5.53.5"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8"
@@ -79,7 +79,7 @@
     "prettier-plugin-svelte": "^3.5.2",
     "rollup": "^4.0.0",
     "rollup-plugin-svelte": "^7.2.0",
-    "svelte": "^5.0.0",
+    "svelte": "^5.53.5",
     "vite": "^6.0.0",
     "vitest": "^3.0.0"
   },
